@@ -1,0 +1,209 @@
+[global_param]
+
+# choix du mode de fonctionnement 0:evaluate, 1:viewgrid, 2:cellularmatrix,
+# 3:testsom, 4:testsomsuperpixel, 5:testsomTSP, 6:opticalFlow
+functionModeChoice = 2
+
+# level = radius map
+levelRadius = 15
+
+# level = radius matcher map
+levelRadiusMatcher = 15
+
+traceActive = false
+traceReportBest = true
+traceSaveSolutionFile = false
+
+# ponderations de la fonction objectif 
+# f = W1 * objective_1 + W2 * objective_2 + W3 * objective_3
+weightObjective1 = 0.01
+weightObjective2 = 0.001
+weightObjective3 = 0.0001
+
+[test_som]
+#0:som, 1:batch, 2:som_seg, 3:batch_seg, 4:batch_seg_sampling, 5:somTSP
+testSom = 0
+projectSuperPixelVoronoi = 0
+drawSuperpixelContours = 0
+
+[som_op_0]
+typeWaveAlpha = 0
+alphaInitial = 1.0
+alphaFinal = 0.01
+rInitial = 20
+rFinal = 0.5
+niter = 1
+nGene = 100
+modeCalcul = 0
+buffered = 1
+
+[som_op_batch]
+typeWaveAlpha = 0
+alphaInitial = 1.0
+alphaFinal = 0.1
+rInitial = 1.5
+rFinal = 0.5
+niter = 1
+nGene = 5
+modeCalcul = 1
+buffered = 1
+
+[som_op_seg]
+typeWaveAlpha = 0
+alphaInitial = 1.0
+alphaFinal = 0.01
+rInitial = 20
+rFinal = 0.5
+niter = 1
+nGene = 100
+modeCalcul = 2
+buffered = 1
+
+[som_op_batch_seg]
+typeWaveAlpha = 0
+alphaInitial = 1.0
+alphaFinal = 0.1
+rInitial = 1.5
+rFinal = 0.5
+niter = 1
+nGene = 0
+modeCalcul = 3
+buffered = 0
+
+[som_op_batch_seg_sampling]
+typeWaveAlpha = 0
+alphaInitial = 1.0
+alphaFinal = 0.1
+rInitial = 1.5
+rFinal = 0.5
+niter = 20
+nGene = 5
+modeCalcul = 4
+buffered = 1
+
+[som_op_tsp]
+typeWaveAlpha = 0
+alphaInitial = 1.0
+alphaFinal = 0.01
+rInitial = 20
+rFinal = 0.5
+niter = 1
+nGene = 1000
+modeCalcul = 5
+buffered = 1
+
+[test_cellular]
+#0: CenterTocenter, 1:Center, 2:Id
+testCellular = 1
+
+[local_search]
+
+# faux s'il s'agit de partir de l'input comme solution pre-construite
+# vrai si on construit a partir d'une initialisation aleatoire
+constructFromScratchParam = true
+
+# 0 marche aleatoire, 1 LS first improvement, 2 LS best improvement
+localSearchType = 1
+
+neighborhoodSize = 1000
+nbOfConstructAndRepairs = 10
+nbOfInternalConstructs = 100
+nbOfInternalRepairs = 20000
+#nbOfConstructAndRepairs = 1
+#nbOfInternalConstructs = 1
+#nbOfInternalRepairs = 0
+
+# Probablitites operateurs de voisinage (sur 100 tirages)
+# 5 operateurs (0 a 5) = 6 probabilites de tirage
+probabilityOperators = 2-1-2-10-10-75
+
+[ls_stochastic]
+niter = 20
+nGene = 5
+modeCalcul = 0
+buffered = 1
+
+[ls_first]
+niter = 20
+nGene = 5
+modeCalcul = 1
+buffered = 1
+
+[ls_best]
+niter = 20
+nGene = 5
+modeCalcul = 2
+buffered = 1
+
+[active_objs]
+obj_distr = 0
+obj_length = 0
+obj_sqr_length = 0
+obj_cost = 1
+obj_sqr_cost = 0
+obj_cost_window = 0
+obj_sqr_cost_window = 0
+obj_smoothing = 1
+obj_gd_error = 0
+
+[genetic_method]
+
+# algo memetique
+memeticAlgorithm = true
+
+# taille population
+populationSize = 10
+
+# nombre maximum de generations
+generationNumber = 10
+
+# algo memetic (parametres recherche locale surcharges)
+MAneighborhoodSize = 100
+MAnbOfInternalConstructs = 10
+MAnbOfInternalRepairs = 2000
+
+[instance_generator]
+
+# Nombre d'instances generees
+nInstances = 10
+saturation = 10
+
+[input]
+useDisparityMap = 1
+#inputSourceImageLeft = teddyL_groundtruth.pgm
+inputSourceImageLeft = teddyL.png
+#inputSourceImageRight = teddyR.png
+#inputDisparityImageGroundTruth = teddyL_groundtruth.pgm
+
+[param_1]
+#fileGrid2DPoints = output.points
+#fileGrid3DPoints = output3D.points
+#fileGridOfColors = output3D.gridcolors
+#statisticsFile = statistics.stats
+#fileGrid2DPoints = outputTim.points
+fileOutImageItself2DPoint = outputImageItself2D.points
+fileOutImageItself2DColors = outputImageItself2D.gridcolors
+fileOutImageItself3DPoint = outputImageItself3D.points
+fileOutImageItself3DColors = outputImageItself3D.gridcolors
+fileNnOutNoImage2DPoints = outputNnNoImage2D.points
+fileNnOutNoImage2DColors = outputNnNoImage2D.gridcolors
+fileNnOutNoImage3DPoints = outputNnNoImage3D.points
+fileNnOutNoImage3DColors = outputNnNoImage3D.gridcolors
+fileNnOutFromImage2DPoints = outputNnFromImage2D.points
+fileNnOutFromImage2DColors = outputNnFromImage2D.gridcolors
+fileNnOutFromImage3DPoints = outputNnFromImage3D.points
+fileNnOutFromImage3DColors = outputNnFromImage3D.gridcolors
+fileSPColorValue = SPteddyL.colors
+fileVRColorValue = BteddyL.colors
+
+[param_2]
+# Image parameters
+scaleFactor = 8.0
+baseLine = 0.16
+focalDistance = 374.0
+#focalDistance = 935.0
+#focalDistance = 3740.0
+disparityRange = 20
+backgroundDisparity = 25
+minMeshDisparity = 25
+

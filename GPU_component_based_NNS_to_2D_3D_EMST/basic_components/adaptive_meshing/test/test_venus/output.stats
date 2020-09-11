@@ -1,0 +1,3 @@
+L?R?P?       initMode      iteration     cellRadius         lsMode        costWei  costWindowWei      smoothWei   objValBefore    objValAfter     DataBefore      DataAfter   SmoothBefore    SmoothAfter    GTErrBefore     GTErrAfter        runtime   CUDA_runtime
+100	0	0	0	0	0.155	147.013	
+100	0	0	0	0	0.16	154.686	

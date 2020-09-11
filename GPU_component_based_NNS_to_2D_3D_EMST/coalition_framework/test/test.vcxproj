@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{37E0214B-BD9B-3F0C-8D2A-BBD858EF3CA4}</ProjectGuid>
+    <RootNamespace>calculateur</RootNamespace>
+    <Keyword>Qt4VSv1.0</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <PlatformToolset>v140</PlatformToolset>
+    <OutputDirectory>..\debug86\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+    <IntermediateDirectory>debug\</IntermediateDirectory>
+    <PrimaryOutput>calculateur</PrimaryOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <PlatformToolset>v140</PlatformToolset>
+    <OutputDirectory>..\bin\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+    <IntermediateDirectory>release\</IntermediateDirectory>
+    <PrimaryOutput>calculateur</PrimaryOutput>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\debug86\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">calculateur</TargetName>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</IgnoreImportLibrary>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">calculateur</TargetName>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</IgnoreImportLibrary>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;..\include;..\..\optimization_operators\include;..\..\basic_components\include;..\include;C:\boost_1_66_0;C:\Qt\Qt5.9.1\5.9.1\Qt5.9_static\include;C:\Qt\Qt5.9.1\5.9.1\Qt5.9_static\include\QtGui;C:\Qt\Qt5.9.1\5.9.1\Qt5.9_static\include\QtXml;C:\Qt\Qt5.9.1\5.9.1\Qt5.9_static\include\QtCore;debug;C:\Qt\Qt5.9.1\5.9.1\Qt5.9_static\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>debug\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4577;4467;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_CONSOLE;UNICODE;WIN32;WIN64;QT_GUI_LIB;QT_XML_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+      <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>D:\creput\work_popip\popip\optical_flow_coalition\bin\libCalculateur.lib;C:\Progra~1\NVIDIA~2\CUDA\v9.1\lib\x64\cuda.lib;C:\Progra~1\NVIDIA~2\CUDA\v9.1\lib\x64\cudart.lib;C:\Qt\Qt5.9.1\5.9.1\Qt5.9_static\plugins\platforms\qwindowsd.lib;dwmapi.lib;winspool.lib;imm32.lib;oleaut32.lib;opengl32.lib;shlwapi.lib;shell32.lib;rpcrt4.lib;C:\Qt\Qt5.9.1\5.9.1\Qt5.9_static\lib\Qt5EventDispatcherSupportd.lib;C:\Qt\Qt5.9.1\5.9.1\Qt5.9_static\lib\Qt5AccessibilitySupportd.lib;C:\Qt\Qt5.9.1\5.9.1\Qt5.9_static\lib\Qt5FontDatabaseSupportd.lib;ole32.lib;gdi32.lib;user32.lib;advapi32.lib;C:\Qt\Qt5.9.1\5.9.1\Qt5.9_static\lib\qtfreetyped.lib;C:\Qt\Qt5.9.1\5.9.1\Qt5.9_static\lib\Qt5ThemeSupportd.lib;C:\Qt\Qt5.9.1\5.9.1\Qt5.9_static\plugins\imageformats\qgifd.lib;C:\Qt\Qt5.9.1\5.9.1\Qt5.9_static\plugins\imageformats\qicnsd.lib;C:\Qt\Qt5.9.1\5.9.1\Qt5.9_static\plugins\imageformats\qicod.lib;C:\Qt\Qt5.9.1\5.9.1\Qt5.9_static\plugins\imageformats\qjpegd.lib;C:\Qt\Qt5.9.1\5.9.1\Qt5.9_static\plugins\imageformats\qtgad.lib;C:\Qt\Qt5.9.1\5.9.1\Qt5.9_static\plugins\imageformats\qtiffd.lib;C:\Qt\Qt5.9.1\5.9.1\Qt5.9_static\plugins\imageformats\qwbmpd.lib;C:\Qt\Qt5.9.1\5.9.1\Qt5.9_static\plugins\imageformats\qwebpd.lib;C:\Qt\Qt5.9.1\5.9.1\Qt5.9_static\lib\Qt5Guid.lib;comdlg32.lib;oleaut32.lib;imm32.lib;winmm.lib;glu32.lib;opengl32.lib;gdi32.lib;C:\Qt\Qt5.9.1\5.9.1\Qt5.9_static\lib\qtlibpngd.lib;C:\Qt\Qt5.9.1\5.9.1\Qt5.9_static\lib\qtharfbuzzd.lib;C:\Qt\Qt5.9.1\5.9.1\Qt5.9_static\lib\Qt5Cored.lib;kernel32.lib;user32.lib;shell32.lib;uuid.lib;ole32.lib;advapi32.lib;ws2_32.lib;mpr.lib;version.lib;winmm.lib;C:\Qt\Qt5.9.1\5.9.1\Qt5.9_static\lib\qtpcre2d.lib;$(QTDIR)\lib\Qt5Guid.lib;$(QTDIR)\lib\Qt5Xmld.lib;$(QTDIR)\lib\Qt5Cored.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;C:\Progra~1\NVIDIA~2\CUDA\v9.1\lib\x64;D:\creput\work_popip\popip\optical_flow_coalition\bin;C:\Qt\Qt5.9.1\5.9.1\Qt5.9_static\plugins\platforms;C:\Qt\Qt5.9.1\5.9.1\Qt5.9_static\lib;C:\Qt\Qt5.9.1\5.9.1\Qt5.9_static\plugins\imageformats;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <OutputFile>$(OutDir)\calculateur.exe</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Console</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_CONSOLE;UNICODE;WIN32;WIN64;QT_GUI_LIB;QT_XML_LIB;QT_CORE_LIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;..\include;..\..\optimization_operators\include;..\..\basic_components\include;..\include;C:\boost_1_66_0;C:\Qt\Qt5.9.1\5.9.1\Qt5.9_static\include;C:\Qt\Qt5.9.1\5.9.1\Qt5.9_static\include\QtGui;C:\Qt\Qt5.9.1\5.9.1\Qt5.9_static\include\QtXml;C:\Qt\Qt5.9.1\5.9.1\Qt5.9_static\include\QtCore;release;C:\Qt\Qt5.9.1\5.9.1\Qt5.9_static\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>release\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <DisableSpecificWarnings>4577;4467;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>_CONSOLE;UNICODE;WIN32;WIN64;QT_NO_DEBUG;QT_GUI_LIB;QT_XML_LIB;QT_CORE_LIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>D:\creput\work_popip\popip\optical_flow_coalition\bin\libCalculateur.lib;C:\Progra~1\NVIDIA~2\CUDA\v9.1\lib\x64\cuda.lib;C:\Progra~1\NVIDIA~2\CUDA\v9.1\lib\x64\cudart.lib;C:\Qt\Qt5.9.1\5.9.1\Qt5.9_static\plugins\platforms\qwindows.lib;dwmapi.lib;winspool.lib;imm32.lib;oleaut32.lib;opengl32.lib;shlwapi.lib;shell32.lib;rpcrt4.lib;C:\Qt\Qt5.9.1\5.9.1\Qt5.9_static\lib\Qt5EventDispatcherSupport.lib;C:\Qt\Qt5.9.1\5.9.1\Qt5.9_static\lib\Qt5AccessibilitySupport.lib;C:\Qt\Qt5.9.1\5.9.1\Qt5.9_static\lib\Qt5FontDatabaseSupport.lib;ole32.lib;gdi32.lib;user32.lib;advapi32.lib;C:\Qt\Qt5.9.1\5.9.1\Qt5.9_static\lib\qtfreetype.lib;C:\Qt\Qt5.9.1\5.9.1\Qt5.9_static\lib\Qt5ThemeSupport.lib;C:\Qt\Qt5.9.1\5.9.1\Qt5.9_static\plugins\imageformats\qgif.lib;C:\Qt\Qt5.9.1\5.9.1\Qt5.9_static\plugins\imageformats\qicns.lib;C:\Qt\Qt5.9.1\5.9.1\Qt5.9_static\plugins\imageformats\qico.lib;C:\Qt\Qt5.9.1\5.9.1\Qt5.9_static\plugins\imageformats\qjpeg.lib;C:\Qt\Qt5.9.1\5.9.1\Qt5.9_static\plugins\imageformats\qtga.lib;C:\Qt\Qt5.9.1\5.9.1\Qt5.9_static\plugins\imageformats\qtiff.lib;C:\Qt\Qt5.9.1\5.9.1\Qt5.9_static\plugins\imageformats\qwbmp.lib;C:\Qt\Qt5.9.1\5.9.1\Qt5.9_static\plugins\imageformats\qwebp.lib;C:\Qt\Qt5.9.1\5.9.1\Qt5.9_static\lib\Qt5Gui.lib;comdlg32.lib;oleaut32.lib;imm32.lib;winmm.lib;glu32.lib;opengl32.lib;gdi32.lib;C:\Qt\Qt5.9.1\5.9.1\Qt5.9_static\lib\qtlibpng.lib;C:\Qt\Qt5.9.1\5.9.1\Qt5.9_static\lib\qtharfbuzz.lib;C:\Qt\Qt5.9.1\5.9.1\Qt5.9_static\lib\Qt5Core.lib;kernel32.lib;user32.lib;shell32.lib;uuid.lib;ole32.lib;advapi32.lib;ws2_32.lib;mpr.lib;version.lib;winmm.lib;C:\Qt\Qt5.9.1\5.9.1\Qt5.9_static\lib\qtpcre2.lib;$(QTDIR)\lib\Qt5Gui.lib;$(QTDIR)\lib\Qt5Xml.lib;$(QTDIR)\lib\Qt5Core.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;C:\Progra~1\NVIDIA~2\CUDA\v9.1\lib\x64;D:\creput\work_popip\popip\optical_flow_coalition\bin;C:\Qt\Qt5.9.1\5.9.1\Qt5.9_static\plugins\platforms;C:\Qt\Qt5.9.1\5.9.1\Qt5.9_static\lib;C:\Qt\Qt5.9.1\5.9.1\Qt5.9_static\plugins\imageformats;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <LinkIncremental>false</LinkIncremental>
+      <OutputFile>$(OutDir)\calculateur.exe</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Console</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_CONSOLE;UNICODE;WIN32;WIN64;QT_NO_DEBUG;QT_GUI_LIB;QT_XML_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="D:\creput\work_popip\popip\optical_flow_coalition\test\calculateur_plugin_import.cpp" />
+    <CustomBuild Include="debug\moc_predefs.h.cbt">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\Qt5.9.1\5.9.1\Qt5.9_static\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">cl -Bx"$(QTDIR)\bin\qmake.exe" -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zi -MDd -EHsc -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E C:\Qt\Qt5.9.1\5.9.1\Qt5.9_static\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;debug\moc_predefs.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generate moc_predefs.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\moc_predefs.h;%(Outputs)</Outputs>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <CustomBuild Include="release\moc_predefs.h.cbt">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\Qt5.9.1\5.9.1\Qt5.9_static\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">cl -Bx"$(QTDIR)\bin\qmake.exe" -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -O2 -MT -EHsc -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E C:\Qt\Qt5.9.1\5.9.1\Qt5.9_static\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;release\moc_predefs.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generate moc_predefs.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\moc_predefs.h;%(Outputs)</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties UicDir=".\GeneratedFiles" RccDir=".\GeneratedFiles" Qt5Version_x0020_x64="Qt5.9_static" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
