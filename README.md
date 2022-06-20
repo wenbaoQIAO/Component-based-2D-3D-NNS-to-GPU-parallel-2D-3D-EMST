@@ -6,4 +6,6 @@ For tree traversal, instead of using breadth-first-search, this paper proposes C
 Results show that applying K-d search with static pruning technique and the proposed operators totally working in parallel on GPU, our current implementation runs faster than our previous work and current optimal dual-tree mlpack EMST library.
 
 
-Details of this algorithm can be found in the paper: Qiao, W. B., & Créput, J. C. (2021). Component-based 2-/3-dimensional nearest neighbor search based on Elias method to GPU parallel 2D/3D Euclidean Minimum Spanning Tree Problem. Applied Soft Computing, 100, 106928. https://doi.org/10.1016/j.asoc.2020.106928
+Details of this algorithm can be found in the paper: 
+
+Qiao, W. B., & Créput, J. C. (2021). Component-based 2-/3-dimensional nearest neighbor search based on Elias method to GPU parallel 2D/3D Euclidean Minimum Spanning Tree Problem. Applied Soft Computing, 100, 106928. https://doi.org/10.1016/j.asoc.2020.106928
